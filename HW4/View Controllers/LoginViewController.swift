@@ -13,8 +13,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var passwordTextField: UITextField!
     
-    
-    
     private let user = Person.getPerson()
     
     override func viewDidLoad() {
@@ -22,7 +20,6 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         userNameTextField.delegate = self
         passwordTextField.delegate = self
-
     }
     
     // MARK: - Hide keyboard to tap
@@ -73,7 +70,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         passwordTextField.text = nil
     }
     
-    // MARK: - keyboard text field switch
+    // MARK: - Keyboard text field switch
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let nextField = self.view.viewWithTag(textField.tag + 1) as? UITextField {
             nextField.becomeFirstResponder()
@@ -96,24 +93,3 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         present(alert, animated: true)
     }
 }
-    
-    
-
-/*
-// MARK: - Alert Controller
-extension LoginViewController {
-    private func showAlert(with title: String,
-                           and message: String) {
-        let alert = UIAlertController(title: title,
-                                      message: message,
-                                      preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "Ok",
-                                     style: .default)
-//        let cancelAction = UIAlertAction(title: "Cancel", style: .destructive)
-        alert.addAction(okAction)
-//        alert.addAction(cancelAction)
-        present(alert, animated: true)
-    }
-}
-
-*/

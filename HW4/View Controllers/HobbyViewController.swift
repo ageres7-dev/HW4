@@ -9,11 +9,14 @@ import UIKit
 
 class HobbyViewController: UIViewController {
     @IBOutlet var hobbyTextLebel: UILabel!
+    @IBOutlet var hobbyImageView: UIImageView!
+    
     var hobbyText = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        hobbyImageView.layer.cornerRadius = 15
         hobbyTextLebel.text = hobbyText
     }
 }

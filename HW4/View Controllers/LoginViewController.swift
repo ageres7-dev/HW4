@@ -13,6 +13,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var passwordTextField: UITextField!
     
+    
+    
     private let user = Person.getPerson()
     
     override func viewDidLoad() {
@@ -20,6 +22,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
         userNameTextField.delegate = self
         passwordTextField.delegate = self
+
     }
     
     // MARK: - Hide keyboard to tap
@@ -47,7 +50,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     }
 
     // MARK: - Login action
-    @IBAction func logInButton() {
+    @IBAction func logInButtonAction() {
         if userNameTextField.text == user.user,
            passwordTextField.text == user.password {
             performSegue(withIdentifier: "showWelcomeScreen", sender: nil)
@@ -57,11 +60,11 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    @IBAction func forgotNameButton() {
+    @IBAction func forgotNameButtonAction() {
         showAlert(with: "Oops!", and: "Your name is \(user.user)")
     }
     
-    @IBAction func forgotPasswordButton() {
+    @IBAction func forgotPasswordButtonAction() {
         showAlert(with: "Oops!", and: "Your password \(user.password)")
     }
     
@@ -76,7 +79,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             nextField.becomeFirstResponder()
         } else {
             textField.resignFirstResponder()
-            logInButton()
+            logInButtonAction()
         }
         return false
     }

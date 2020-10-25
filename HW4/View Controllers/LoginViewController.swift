@@ -10,7 +10,6 @@ import UIKit
 class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet var userNameTextField: UITextField!
-    
     @IBOutlet var passwordTextField: UITextField!
     
     private let user = Person.getPerson()
@@ -50,7 +49,8 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     @IBAction func logInButtonAction() {
         if userNameTextField.text == user.user,
            passwordTextField.text == user.password {
-            performSegue(withIdentifier: "showWelcomeScreen", sender: nil)
+            performSegue(withIdentifier: "showWelcomeScreen",
+                         sender: nil)
         } else {
             showAlert(with: "Oops", and: "Password incorrect")
             passwordTextField.text = nil

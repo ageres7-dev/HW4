@@ -10,10 +10,12 @@ import UIKit
 class WelcomeViewController: UIViewController {
     @IBOutlet var fullNameLabel: UILabel!
     
-    var fullNameText = ""
+//    var fullNameText = ""
+    var user: Person?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        fullNameLabel.text? += "\(fullNameText)!"
+//        fullNameLabel.text? += "\(fullNameText)!"
+        fullNameLabel.text? += "\(user!.fullName)!"
     }
 }

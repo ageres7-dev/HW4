@@ -32,17 +32,30 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         guard let tabBarController = segue.destination
                 as? UITabBarController else { return }
         
+//        for currentVC in tabBarController.viewControllers! {
+//            switch currentVC {
+//            case let welcomeVC as WelcomeViewController:
+//                welcomeVC.fullNameText = user.fullName
+//            case let biographyVC as BiographyViewController:
+//                biographyVC.biography = user.biography
+//            case let hobbyVC as HobbyViewController:
+//                hobbyVC.hobbyText = user.hobby
+//            default: break
+//            }
+//        }
+        
         for currentVC in tabBarController.viewControllers! {
             switch currentVC {
             case let welcomeVC as WelcomeViewController:
-                welcomeVC.fullNameText = user.fullName
+                welcomeVC.user = user
             case let biographyVC as BiographyViewController:
-                biographyVC.biography = user.biography
+                biographyVC.user = user
             case let hobbyVC as HobbyViewController:
-                hobbyVC.hobbyText = user.hobby
+                hobbyVC.user = user
             default: break
             }
         }
+        
     }
     
     // MARK: - Login action
@@ -72,14 +85,25 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - Keyboard text field switch
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let nextField = self.view.viewWithTag(textField.tag + 1) as? UITextField {
-            nextField.becomeFirstResponder()
-        } else {
+//        if let nextField = self.view.viewWithTag(textField.tag + 1) as? UITextField {
+//            nextField.becomeFirstResponder()
+//        } else {
+//            textField.resignFirstResponder()
+//            logInButtonAction()
+//        }
+        
+        if textField == userNameTextField {
             textField.resignFirstResponder()
+            passwordTextField.becomeFirstResponder()
+        } else {
             logInButtonAction()
         }
         return false
     }
+    
+    
+    
+    
     // MARK: - Alert Controller
     private func showAlert(with title: String,
                            and message: String) {

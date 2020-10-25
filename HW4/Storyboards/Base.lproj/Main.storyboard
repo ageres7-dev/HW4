@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -158,7 +158,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="bio" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="oAp-FF-4RX">
-                                <rect key="frame" x="16" y="302.5" width="382" height="494.5"/>
+                                <rect key="frame" x="16" y="302.5" width="382" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -175,7 +175,7 @@
                         <constraints>
                             <constraint firstItem="soN-IU-GYr" firstAttribute="trailing" secondItem="UK0-mj-3FL" secondAttribute="trailing" constant="16" id="0Sg-Da-y0O"/>
                             <constraint firstItem="UK0-mj-3FL" firstAttribute="top" secondItem="soN-IU-GYr" secondAttribute="top" constant="16" id="54N-ch-XZJ"/>
-                            <constraint firstItem="soN-IU-GYr" firstAttribute="bottom" secondItem="oAp-FF-4RX" secondAttribute="bottom" constant="16" id="9tP-EV-7bR"/>
+                            <constraint firstItem="soN-IU-GYr" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="oAp-FF-4RX" secondAttribute="bottom" constant="16" id="9tP-EV-7bR"/>
                             <constraint firstItem="oAp-FF-4RX" firstAttribute="leading" secondItem="soN-IU-GYr" secondAttribute="leading" constant="16" id="Omo-c1-iV7"/>
                             <constraint firstItem="soN-IU-GYr" firstAttribute="trailing" secondItem="oAp-FF-4RX" secondAttribute="trailing" constant="16" id="akT-ZW-HMh"/>
                             <constraint firstItem="oAp-FF-4RX" firstAttribute="top" secondItem="UK0-mj-3FL" secondAttribute="bottom" constant="16" id="bsa-22-PCP"/>
@@ -217,6 +217,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="OBK-7Y-Iud" firstAttribute="trailing" secondItem="eBm-Vi-g5P" secondAttribute="trailing" constant="16" id="5eq-xQ-A9Y"/>
+                            <constraint firstItem="OBK-7Y-Iud" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="mWg-I6-lml" secondAttribute="bottom" constant="16" id="DfG-uO-Qkv"/>
                             <constraint firstItem="eBm-Vi-g5P" firstAttribute="top" secondItem="OBK-7Y-Iud" secondAttribute="top" constant="16" id="LYb-r4-0Wt"/>
                             <constraint firstItem="mWg-I6-lml" firstAttribute="leading" secondItem="OBK-7Y-Iud" secondAttribute="leading" constant="16" id="Zg5-2c-1GY"/>
                             <constraint firstItem="eBm-Vi-g5P" firstAttribute="leading" secondItem="OBK-7Y-Iud" secondAttribute="leading" constant="16" id="avA-3H-PTt"/>

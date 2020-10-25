@@ -11,12 +11,13 @@ class HobbyViewController: UIViewController {
     @IBOutlet var hobbyTextLebel: UILabel!
     @IBOutlet var hobbyImageView: UIImageView!
     
-    var hobbyText = ""
-    
+//    var hobbyText = ""
+    var user: Person?
     override func viewDidLoad() {
         super.viewDidLoad()
         
         hobbyImageView.layer.cornerRadius = 15
-        hobbyTextLebel.text = hobbyText
+//        hobbyTextLebel.text = hobbyText
+        hobbyTextLebel.text = user?.hobby
     }
 }

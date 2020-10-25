@@ -12,10 +12,12 @@ class BiographyViewController: UIViewController {
     
     @IBOutlet var pictureView: UIImageView!
     
-    var biography = ""
+//    var biography = ""
+    var user: Person?
     override func viewDidLoad() {
         super.viewDidLoad()
         pictureView.layer.cornerRadius = 15
-        bioLabel.text = biography
+//        bioLabel.text = biography
+        bioLabel.text = user?.biography
     }
 }

@@ -44,7 +44,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-
+    
     // MARK: - Login action
     @IBAction func logInButtonAction() {
         if userNameTextField.text == user.user,
@@ -88,7 +88,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                                       preferredStyle: .alert)
         let okAction = UIAlertAction(title: "Ok",
                                      style: .default)
-
+        
         alert.addAction(okAction)
         present(alert, animated: true)
     }

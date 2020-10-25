@@ -9,7 +9,7 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     @IBOutlet var fullNameLabel: UILabel!
-   
+    
     var fullNameText = ""
     
     override func viewDidLoad() {
